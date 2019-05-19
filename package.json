@@ -1,0 +1,8 @@
+{
+  "name": "concepts",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Ronald Hong <ronniejhong@gmail.com>",
+  "license": "MIT",
+  "private": true
+}

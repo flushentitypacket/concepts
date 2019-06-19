@@ -1,3 +1,9 @@
+// Shape property: 
+//  All levels of the tree, except possibly the last one (deepest) are fully filled, and, 
+//  if the last level of the tree is not complete, the nodes of that level are filled from left to right.
+// Max heap property: 
+//  The key stored in each node is either greater than or equal to (≥) the keys in the node's children.
+
 const getLeftChildIndex = (parentIndex) => 2 * parentIndex + 1
 const getRightChildIndex = (parentIndex) => 2 * parentIndex + 2
 const getParentIndex = (childIndex) => Math.floor((childIndex - 1) / 2)
@@ -11,6 +17,9 @@ const swapAtIndexes = (list, aIndex, bIndex) => {
 
 // Sift down for a max heap.
 // Assumes the heap rooted at `brokenHeap[minIndex]` has children that are valid heaps.
+// 
+// To fix the heap, swap the greatest value to the root position between the [root, rootLeftChild, rootRightChild]
+// A swap may break the heap property, so you may recursively call siftDown to restore it.
 const maxSiftDown = (brokenHeap, minIndex, maxIndex) => {
   const rootIndex = minIndex
   const leftChildIndex = getLeftChildIndex(rootIndex)

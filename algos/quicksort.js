@@ -5,6 +5,8 @@ const swap = (list, i, j) => {
   list[j] = iVal
 }
 
+// Key insight: 
+// The final position of `pivot` is sorted, since all elements after it are greater and all elements previous are lesser
 const partition = (list, minIndex, maxIndex) => {
   const pivotIndex = maxIndex
   const pivot = list[pivotIndex]

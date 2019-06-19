@@ -1,3 +1,5 @@
+// Merge: given 2 sorted lists, combine to make 1 sorted list
+
 // NOTE: `merge` mutates listA and listB
 const merge = (listA, listB) => {
   const merged = []
